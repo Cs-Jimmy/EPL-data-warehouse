@@ -1,10 +1,10 @@
 # EPL 2021-2022 Data Warehouse Project
 
-## About the Project
+## Project Overview
 
 A collaborative data warehouse built as part of an Advanced Database course, analyzing the English Premier League 2021-2022 season. Features automated ETL pipeline execution, star schema design, and SCD Type 6 implementation for historical player tracking.
 
-### Data Sources
+### Data Source
 [Kaggle - EPL 21-22 Matches & Players](https://www.kaggle.com/datasets/azminetoushikwasi/epl-21-22-matches-players)
 
 ## Team Contributions
@@ -37,28 +37,26 @@ I built the **automated scheduling** for the data warehouse, enabling daily ETL 
 ## Project Structure
 
 ```
-EPL-data-warehouse-pipeline/
+EPL-data-warehouse/
 ├── README.md
-├── pipeline-diagram.png
-│
-├── dataset/
-│   ├── players.csv
-│   ├── matches.csv
-│   └── points.csv
 │
 ├── database-schema/
+│   ├── Football_DW_Analytics_Queries.sql
 │   ├── Staging_Tables.sql
-│   ├── StarSchema.sql
-│   ├── Fact_Procedure.sql
-│   └── Football_DW_Analytics_Queries.sql
+│   └── StarSchema.sql
 │
-├── stored-procedures/
-│   ├── SCD_Procedure.sql
-│   └── Send_mail_and_upload.sql
+├── job-automation/
+│   ├── runJob.bat
+│   └── runProcedure.sql
 │
-└── job-automation/
-    ├── runJob.bat
-    ├── runProcedure.sql
-    └── job-execution-screenshot.png
+├── matchdata/
+│   ├── all_match_results.csv
+│   ├── all_players_stats.csv
+│   └── points_table.csv
+│
+└── stored-procedures/
+    ├── ETL_Main_Procedure.sql
+    ├── Fact_Procedure.sql
+    └── SCD_Procedure.sql
 ```
 
